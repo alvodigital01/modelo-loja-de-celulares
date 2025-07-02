@@ -196,3 +196,95 @@ nav a:hover {
 
 
 }
+
+
+/* produtos */
+.secao-produtos {
+  background: #f8f9fa;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.texto-secao {
+  margin-bottom: 40px;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.6s ease;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.6s ease;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card-item {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.181);
+  padding: 30px;
+  width:400px;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: subir 0.6s forwards;
+}
+
+.card-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.card-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.card-item p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.btn-black {
+  background: #000;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn-black:hover {
+  background: #333;
+}
+
+/* Animações */
+@keyframes subir {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -60,6 +60,97 @@
 
 
 
+
+<section class="secao-produtos animar">
+  <div class="texto-secao">
+    <h2 class="titulo">Confira nossas categorias</h2>
+    <p class="subtitulo">Selecionamos os melhores dispositivos para você!</p>
+  </div>
+
+  <div class="cards-container">
+    <div class="card-item" style="animation-delay: 0s;">
+      <img src="imagens/iphones1.jpg" alt="iPhone">
+      <h3>Celulares Apple</h3>
+      <p>Desempenho impecável, design premium e garantia de qualidade.</p>
+      <a href="#" class="btn-black">
+        Faça seu pedido <i class="bi bi-arrow-right-short"></i>
+      </a>
+    </div>
+
+    <div class="card-item" style="animation-delay: 0.2s;">
+      <img src="imagens/xaiomi1.jpg" alt="Xiaomi">
+      <h3>Celulares Xiaomi</h3>
+      <p>Alta tecnologia com o melhor custo-benefício do mercado.</p>
+      <a href="#" class="btn-black">
+        Faça seu pedido <i class="bi bi-arrow-right-short"></i>
+      </a>
+    </div>
+
+    <div class="card-item" style="animation-delay: 0.4s;">
+      <img src="imagens/macbook1.png" alt="MacBook">
+      <h3>MacBooks</h3>
+      <p>Alta performance para criatividade, produtividade e mobilidade.</p>
+      <a href="#" class="btn-black">
+        Faça seu pedido <i class="bi bi-arrow-right-short"></i>
+      </a>
+    </div>
+    
+  </div>
+   <div class="texto-secao">
+    <h2 class="titulo">Mais tecnologia para o seu dia a dia</h2>
+    <p class="subtitulo">Selecionamos os produtos mais buscados pelos nossos clientes:</p>
+  </div>
+
+  <div class="cards-container">
+    <div class="card-item" style="animation-delay: 0s;">
+      <img src="imagens/Ipad1.png" alt="iPads">
+      <h3>iPads</h3>
+      <p>Versatilidade, portabilidade e a magia da tela Retina. Encontre o ideal para você.</p>
+      <a href="#" class="btn-black">
+        Faça seu pedido <i class="bi bi-arrow-right-short"></i>
+      </a>
+    </div>
+
+    <div class="card-item" style="animation-delay: 0.2s;">
+      <img src="imagens/games1.png" alt="Games">
+      <h3>Games</h3>
+      <p>Consoles e acessórios para quem busca imersão total na hora de jogar.</p>
+      <a href="#" class="btn-black">
+        Faça seu pedido <i class="bi bi-arrow-right-short"></i>
+      </a>
+    </div>
+
+    <div class="card-item" style="animation-delay: 0.4s;">
+      <img src="imagens/eletronicos1.jpg" alt="Eletrônicos em Geral">
+      <h3>Eletrônicos em Geral</h3>
+      <p>Câmeras, Apple Watches, caixas de som e muito mais. Tecnologia que facilita sua vida.</p>
+      <a href="#" class="btn-black">
+        Faça seu pedido <i class="bi bi-arrow-right-short"></i>
+      </a>
+    </div>
+  </div>
+
+</section>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- hero -->
 <script>
   window.addEventListener('load', () => {
     document.querySelector('.hero-text').style.opacity = '1';
@@ -67,6 +158,53 @@
     document.querySelector('.hero-image').style.opacity = '1';
     document.querySelector('.hero-image').style.transform = 'translateX(0)';
   });
+</script>
+
+
+
+
+
+ <!-- produtos -->
+<script>
+  const secao = document.querySelector('.secao-produtos');
+  const titulo = document.querySelector('.titulo');
+  const subtitulo = document.querySelector('.subtitulo');
+  const cards = document.querySelectorAll('.card-item');
+
+  function animarSecao() {
+    const top = secao.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight - 100) {
+      titulo.style.opacity = '1';
+      titulo.style.transform = 'translateX(0)';
+
+      subtitulo.style.opacity = '1';
+      subtitulo.style.transform = 'translateX(0)';
+
+      cards.forEach((card, i) => {
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, i * 150);
+      });
+    } else {
+      // Reset
+      titulo.style.opacity = '0';
+      titulo.style.transform = 'translateX(100px)';
+
+      subtitulo.style.opacity = '0';
+      subtitulo.style.transform = 'translateX(-100px)';
+
+      cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(60px)';
+      });
+    }
+  }
+
+  window.addEventListener('scroll', animarSecao);
+  window.addEventListener('load', animarSecao);
 </script>
 
 </body>
