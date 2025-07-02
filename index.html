@@ -63,8 +63,9 @@
 
 <section class="secao-produtos animar">
   <div class="texto-secao">
-    <h2 class="titulo">Confira nossas categorias</h2>
-    <p class="subtitulo">Selecionamos os melhores dispositivos para você!</p>
+    <h2 class="titulo">O seu próximo dispositivo está aqui</h2>
+    <br>
+    <p class="subtitulo">Linha completa de celulares e eletrônicos, <spam class="prodtxt">das melhores marcas</spam>, na palma da sua mão:</p>
   </div>
 
   <div class="cards-container">
@@ -96,10 +97,7 @@
     </div>
     
   </div>
-   <div class="texto-secao">
-    <h2 class="titulo">Mais tecnologia para o seu dia a dia</h2>
-    <p class="subtitulo">Selecionamos os produtos mais buscados pelos nossos clientes:</p>
-  </div>
+  
 
   <div class="cards-container">
     <div class="card-item" style="animation-delay: 0s;">
@@ -167,47 +165,42 @@
 
 
 
- <!-- produtos -->
-<script>
-  const secao = document.querySelector('.secao-produtos');
-  const titulo = document.querySelector('.titulo');
-  const subtitulo = document.querySelector('.subtitulo');
-  const cards = document.querySelectorAll('.card-item');
+ <script>
+  function animarSecoes() {
+    const secoes = document.querySelectorAll('.secao-produtos');
 
-  function animarSecao() {
-    const top = secao.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+    secoes.forEach(secao => {
+      const top = secao.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
 
-    if (top < windowHeight - 100) {
-      titulo.style.opacity = '1';
-      titulo.style.transform = 'translateX(0)';
+      if (top < windowHeight - 150) {
+        // Anima os textos
+        const titulos = secao.querySelectorAll('.titulo');
+        const subtitulos = secao.querySelectorAll('.subtitulo');
+        const cards = secao.querySelectorAll('.card-item');
 
-      subtitulo.style.opacity = '1';
-      subtitulo.style.transform = 'translateX(0)';
+        titulos.forEach(titulo => {
+          titulo.style.opacity = '1';
+          titulo.style.transform = 'translateX(0)';
+        });
 
-      cards.forEach((card, i) => {
-        setTimeout(() => {
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }, i * 150);
-      });
-    } else {
-      // Reset
-      titulo.style.opacity = '0';
-      titulo.style.transform = 'translateX(100px)';
+        subtitulos.forEach(subtitulo => {
+          subtitulo.style.opacity = '1';
+          subtitulo.style.transform = 'translateX(0)';
+        });
 
-      subtitulo.style.opacity = '0';
-      subtitulo.style.transform = 'translateX(-100px)';
-
-      cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(60px)';
-      });
-    }
+        cards.forEach((card, i) => {
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, i * 300); // efeito cascata
+        });
+      }
+    });
   }
 
-  window.addEventListener('scroll', animarSecao);
-  window.addEventListener('load', animarSecao);
+  window.addEventListener('scroll', animarSecoes);
+  window.addEventListener('load', animarSecoes);
 </script>
 
 </body>
