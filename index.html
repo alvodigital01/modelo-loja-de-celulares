@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech</title>
 
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,35 +30,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ <!-- nav -->
 
    <script>
     function toggleMenu() {
@@ -69,11 +41,33 @@
 
 
 
+ <!-- hero -->
+
+
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Crie seu site mobile com estilo</h1>
+      <p>Template moderno, pronto para vender. Altere logo, texto e comece agora.</p>
+      <button class="hero-btn">Solicitar agora</button>
+    </div>
+    <div class="hero-image">
+      <img src="imagens/iphone_15_colurs_1694541091519.avif" alt="Mockup de iPhones" id="heroImg" />
+    </div>
+  </div>
+</section>
 
 
 
 
-
+<script>
+  window.addEventListener('load', () => {
+    document.querySelector('.hero-text').style.opacity = '1';
+    document.querySelector('.hero-text').style.transform = 'translateX(0)';
+    document.querySelector('.hero-image').style.opacity = '1';
+    document.querySelector('.hero-image').style.transform = 'translateX(0)';
+  });
+</script>
 
 </body>
 </html>
