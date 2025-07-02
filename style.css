@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #cccccc;
+}
+
+/* Header base */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 1001;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Botão hamburguer (mobile) */
+.menu-btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-btn div {
+  width: 25px;
+  height: 3px;
+  background-color: #111;
+  transition: 0.3s;
+}
+
+/* Menu mobile padrão */
+nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  color: #111;
+  border-right: 1px solid #ddd;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  transition: left 0.4s ease;
+  z-index: 1000;
+}
+
+nav.active {
+  left: 0;
+}
+
+nav a {
+  color: #111;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  transform: translateX(5px);
+}
+
+/* Estilos desktop */
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+
+  nav {
+    all: unset; /* remove tudo do nav mobile */
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  nav a {
+    font-size: 16px;
+    color: #111;
+    text-decoration: none;
+    transform: none;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+}
+.logo img {
+  height: 50px; /* tamanho padrão no desktop */
+  width: auto;
+}
+
+/* Versão mobile */
+@media (max-width: 767px) {
+  .logo img {
+    height: 40px; /* menor no mobile */
+  }
+}
