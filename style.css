@@ -143,13 +143,13 @@ nav a:hover {
 }
 
 .hero-text h1 {
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: #111;
   margin-bottom: 20px;
 }
 
 .hero-text p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #555;
   margin-bottom: 30px;
 }
@@ -192,11 +192,7 @@ nav a:hover {
     flex: 1;
     transform: translateX(50px);
   }
-  .hero-text h1 {
-  font-size: 2rem;
-  color: #111;
-  margin-bottom: 20px;
-}
+
 
 
 }
