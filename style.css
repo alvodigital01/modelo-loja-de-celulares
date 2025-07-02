@@ -300,11 +300,4 @@ nav a:hover {
     max-width: 600px; width: 100%; height: auto;
 }
 
-/* Responsivo (Mobile) */
-@media (min-width: 768px) {
-.imgselo2{
-    max-width:400px; width: 80%; height: auto;
-}
 
-
-}
