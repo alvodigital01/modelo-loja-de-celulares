@@ -639,6 +639,7 @@ nav a:hover {
 
 
 
+        /* WHATSAP */
 
 
     
@@ -762,3 +763,92 @@ nav a:hover {
       opacity: 1;
       transform: translate(0, 0);
     }
+
+
+
+
+
+        /* FOOTER */
+
+
+    .footer {
+  background-color: #55555538;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  max-height:80px;
+margin-bottom: 10px;
+
+}
+
+.footer-icons {
+  margin-bottom: 20px;
+  ;
+}
+
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: #000000;
+  font-size: 26px;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.footer-icons a:hover {
+  background-color: #00aeffc9;
+  transform: scale(1.05);
+}
+
+
+.footer-info p {
+  margin: 5px 0;
+  color: #000000;
+  font-size: 14px;
+}
+
+.footer-info a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #000000a0;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .footer-icons a {
+    font-size: 24px;
+    margin: 0 8px;
+  }
+
+  .footer-info p {
+    font-size: 13px;
+  }
+
+  .footer-logo img {
+    max-height: 60px;
+  }
+}
