@@ -231,6 +231,101 @@
 
 
 
+<section class="secao-mapa">
+  <h2 class="animar">Nossa Loja em Londrina</h2>
+  <p class="animar"> Av. Me. Leônia Milito, 1377 – Sala 2202 – Bela Suíça, Londrina</p>
+  <a class="botao animar" href="https://www.google.com/maps/place/LJR+iphones+Loja+de+Celulares+em+Londrina/@-23.3108852,-51.1678423,17z" target="_blank">
+    → Clique Para Ir à Loja!
+  </a>
+
+  <div class="mapa-container animar">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1789746969935!2d-51.170417084527996!3d-23.310880084814596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb436db66e11ed%3A0xcfd0c6fcf24fd7f!2sLJR%20iphones%20Loja%20de%20Celulares%20em%20Londrina!5e0!3m2!1spt-BR!2sbr!4v1719951873654!5m2!1spt-BR!2sbr" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+
+
+
+<section class="faq-section animar">
+  <h2>Perguntas frequentes</h2>
+  <p class="subtitulo animar">Sobre nossa loja de celulares e eletrônicos em Londrina:</p>
+
+  <div class="faq-grid">
+
+    <!-- 1 -->
+    <div class="faq-item">
+      <div class="faq-question">Os produtos da TECNO PRO são originais?</div>
+      <div class="faq-answer">
+        Sim! Na TECNO PRO, todos os nossos produtos são 100% originais. Você recebe o produto na embalagem original, com todos os acessórios e manuais, além da garantia do fabricante. <br>
+        <a href="#">Sua tranquilidade é nossa prioridade!</a>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="faq-item">
+      <div class="faq-question">Os produtos são a pronta entrega?</div>
+      <div class="faq-answer">
+        Sim! Grande parte dos nossos produtos está disponível para pronta entrega. Para confirmar a disponibilidade de um produto específico, <a href="#">você pode consultar nossa equipe de atendimento através de um dos links aqui do site</a>, certo? Assim, você tem certeza que pode aproveitar seu novo dispositivo o quanto antes!
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="faq-item">
+      <div class="faq-question">Quais condições de pagamento são oferecidas?</div>
+      <div class="faq-answer">
+        Para facilitar a sua compra, aceitamos PIX, dinheiro e cartão de crédito. No cartão de crédito, você pode parcelar suas compras em até 12 vezes, mediante consulta das taxas de juros aplicáveis. <br>
+        <a href="#">Consulte as condições e aproveite!</a>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="faq-item">
+      <div class="faq-question">A loja TECNO PRO tem loja física?</div>
+      <div class="faq-answer">
+        Sim! A TECNO PRO está localizada em um dos pontos mais nobres de Londrina, no Palhano Square Garden, um espaço moderno e sofisticado para te oferecer uma experiência segura de compra. <a href="#">Visite nossa loja na Av. Me. Leônia Milito, 1377 - Sala 2202 - Bela Suíça</a> e conheça de perto nossos produtos e serviços. Esperamos você!
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="faq-item">
+      <div class="faq-question">Quais produtos são vendidos na loja?</div>
+      <div class="faq-answer">
+        Na TECNO PRO, você encontra uma <a href="#">linha completa de dispositivos para todas as suas necessidades!</a> Oferecemos iPhones, Xaiomis, MacBooks, iPads, Apple Watches, uma variedade de eletrônicos (como câmeras e caixas de som), além de consoles e jogos para os gamers de plantão. Tudo isso com a qualidade e a procedência que você merece!
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="faq-item">
+      <div class="faq-question">A TECNO PRO está presente em quais cidades?</div>
+      <div class="faq-answer">
+        Atualmente, a TECNO PRO possui lojas físicas nas seguintes cidades: Londrina, Porto Alegre, Curitiba e São Paulo. Mas, se você não estiver em alguma dessas cidades, <a href="#">entre em contato com a nossa equipe aqui em Londrina que iremos te atender com a maior satisfação e compromisso!</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -324,5 +419,72 @@
 
   depoimentos.forEach(el => observer.observe(el));
 </script>
+
+
+
+
+ <!-- depoimento -->
+
+<script>
+  // Animação de rolagem
+  const elementosAnimarr = document.querySelectorAll('.animar');
+
+  const observerrr = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visivel');
+        observer.unobserve(entrada.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  elementosAnimar.forEach(el => observer.observe(el));
+</script>
+
+
+
+
+
+ <!-- FAQ -->
+
+<script>
+  // Acordeão: abre só o clicado
+  document.querySelectorAll('.faq-question').forEach(item => {
+  item.addEventListener('click', () => {
+    const container = item.parentElement;
+
+    // Se já está aberta, fecha
+    const isOpen = container.classList.contains('ativo');
+    
+    // Fecha todas as perguntas
+    document.querySelectorAll('.faq-item').forEach(faq => {
+      faq.classList.remove('ativo');
+    });
+
+    // Se não estava aberta, abre
+    if (!isOpen) {
+      container.classList.add('ativo');
+    }
+  });
+});
+
+  // Animação de rolagem
+  const animarEl = document.querySelectorAll('.animar');
+
+  const observera = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visivel');
+        observer.unobserve(entrada.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  animarEl.forEach(el => observer.observe(el));
+</script>
+
+
+
+
 </body>
 </html>
