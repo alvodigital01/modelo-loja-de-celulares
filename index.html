@@ -316,11 +316,30 @@
 
 
 
+<!-- WHATSAP-->
 
 
+<!-- WHATSAPP FORMULÁRIO -->
+<section class="formulario-whatsapp" id="contato">
+  <div class="container">
+    <h1 class="titulo-formulario animar-direita">Vamos dar o próximo passo?</h1>
+    <p class="subtitulo-formulario animar-direita">Compartilhe essas 3 informações e daremos início ao seu atendimento personalizado.</p>
 
+    <form class="animar-esquerda" onsubmit="enviarWhatsApp(); return false;">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="text" id="servico" placeholder="Serviço" required>
+      <textarea id="Mensagem" placeholder="Mensagem"></textarea>
 
-
+      <div class="botao-container-brilhante">
+        <button type="submit" class="animar-baixo">
+          Iniciar Conversa
+          <i class="ph ph-whatsapp-logo" style="margin-left: 8px;"></i>
+        </button>
+        <span class="light-line-form"></span>
+      </div>
+    </form>
+  </div>
+</section>
 
 
 
@@ -483,8 +502,39 @@
   animarEl.forEach(el => observer.observe(el));
 </script>
 
+<!-- SCRIPT WHATSAPP -->
+<script>
+  function enviarWhatsApp() {
+    const nome = document.getElementById("nome").value;
+    const servico = document.getElementById("servico").value;
+    const mensagem = document.getElementById("mensagem").value;
 
+    const texto = `Olá! Meu nome é ${nome}. Quero falar sobre: ${servico}.${mensagem ? '\n\nMensagem: ' + mensagem : ''}`;
 
+    const numero = "5543988724786"; // Substitua pelo seu número do WhatsApp
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+  }
+
+  // Animações ao rolar
+  function animarAoRolar() {
+    const elementos = document.querySelectorAll('.animar-direita, .animar-esquerda, .animar-baixo');
+
+    const observer = new IntersectionObserver(entradas => {
+      entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('ativo');
+          observer.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elementos.forEach(el => observer.observe(el));
+  }
+
+  document.addEventListener('DOMContentLoaded', animarAoRolar);
+</script>
 
 </body>
 </html>

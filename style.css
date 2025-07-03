@@ -635,3 +635,130 @@ nav a:hover {
         grid-template-columns: 1fr;
       }
     }
+
+
+
+
+
+
+    
+ .formulario-whatsapp {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .formulario-whatsapp .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid #55555528;
+      box-shadow: 0 0 10px rgba(255, 156, 219, 0.2);
+    }
+
+    .titulo-formulario {
+     color: #000;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitulo-formulario {
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .formulario-whatsapp input,
+    .formulario-whatsapp textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border: 1px solid #555;
+      border-radius: 8px;
+      background: #5555551a;
+      color: #cccccc;
+      font-size: 1rem;
+    }
+
+    .formulario-whatsapp textarea {
+      resize: vertical;
+      height: 50px;
+    }
+
+    .formulario-whatsapp button {
+      background: linear-gradient(90deg, #00B0FF, #00aeffb4);
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .formulario-whatsapp button:hover {
+      background: linear-gradient(90deg, #00B0FF, #00B0FF);
+    }
+
+    .botao-container-brilhante {
+      position: relative;
+      display: inline-block;
+    }
+
+    .light-line-form {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, transparent, #00aeff22, transparent);
+      background-size: 300% 100%;
+      animation: moveLightForm 2s linear infinite;
+      filter: blur(2px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes moveLightForm {
+      0% {
+        background-position: -100% 0;
+      }
+      100% {
+        background-position: 200% 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .titulo-formulario {
+        font-size: 2rem;
+      }
+    }
+
+    .animar-direita,
+    .animar-esquerda,
+    .animar-baixo {
+      opacity: 0;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .animar-direita {
+      transform: translateX(100px);
+    }
+
+    .animar-esquerda {
+      transform: translateX(-100px);
+    }
+
+    .animar-baixo {
+      transform: translateY(60px);
+    }
+
+    .animar-direita.ativo,
+    .animar-esquerda.ativo,
+    .animar-baixo.ativo {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
