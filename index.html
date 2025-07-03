@@ -44,30 +44,27 @@
 
 
  <!-- hero -->
-
-
 <section class="hero-section">
   <div class="hero-content">
     <div class="hero-text">
-      <h1>Os melhores Produtos, com os melhores preços</h1>
+      <h1><span>Os melhores Produtos,</span><br>com os melhores <span class="gradient-text">preços</span></h1>
       <p>Trabalhamos com produtos novos, seminovos e acessórios originais. Envio rápido e pagamento facilitado.</p>
-       <!-- Botão com brilho WhatsApp -->
-<div class="botao-containerr-brilhante">
-  <button type="submit" class="formm animar-baixo">
-    Iniciar Conversa
-    <i class="ph ph-whatsapp-logo" style="margin-left: 8px;"></i>
-  </button>
-  <span class="lightt-line-form"></span>
-</div>
 
+      <!-- Botão com brilho WhatsApp -->
+      <div class="botao-containerr-brilhante">
+        <button type="submit" class="formm animar-baixo">
+          Iniciar Conversa
+          <i class="ph ph-whatsapp-logo" style="margin-left: 8px;"></i>
+        </button>
+        <span class="lightt-line-form"></span>
+      </div>
     </div>
+
     <div class="hero-image">
       <img src="imagens/iphone_15_colurs_1694541091519.avif" alt="Mockup de iPhones" id="heroImg" />
     </div>
   </div>
 </section>
-
-
 
 
 
@@ -386,10 +383,14 @@
  <!-- hero -->
 <script>
   window.addEventListener('load', () => {
-    document.querySelector('.hero-text').style.opacity = '1';
-    document.querySelector('.hero-text').style.transform = 'translateX(0)';
-    document.querySelector('.hero-image').style.opacity = '1';
-    document.querySelector('.hero-image').style.transform = 'translateX(0)';
+    const text = document.querySelector('.hero-text');
+    const image = document.querySelector('.hero-image');
+
+    text.style.opacity = '1';
+    text.style.transform = 'translateX(0)';
+
+    image.style.opacity = '1';
+    image.style.transform = 'translateX(0)';
   });
 </script>
 
