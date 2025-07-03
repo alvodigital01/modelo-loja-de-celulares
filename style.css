@@ -157,7 +157,7 @@ nav a:hover {
 .hero-btn {
   background-color: #0077ED;
   color: white;
-  padding: 12px 24px;
+  padding: 13px 30px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -229,6 +229,7 @@ nav a:hover {
 
 .prodtxt{
     color:#0077ED ;
+    
 }
 
 .cards-container {
