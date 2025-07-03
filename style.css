@@ -242,7 +242,7 @@ nav a:hover {
 .card-item {
   background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.099);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.032);
   padding: 30px;
   width: 100%;
   max-width: 360px;
