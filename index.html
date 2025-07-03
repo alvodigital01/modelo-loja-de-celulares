@@ -336,7 +336,7 @@
     <form class="animar-esquerda" onsubmit="enviarWhatsApp(); return false;">
       <input type="text" id="nome" placeholder="Seu nome" required>
       <input type="text" id="servico" placeholder="Serviço" required>
-      <textarea id="Mensagem" placeholder="Mensagem"></textarea>
+      <textarea id="mensagem" placeholder="Mensagem"></textarea>
 
       <div class="botao-container-brilhante">
         <button type="submit" class="animar-baixo">
@@ -545,7 +545,7 @@
 
     const texto = `Olá! Meu nome é ${nome}. Quero falar sobre: ${servico}.${mensagem ? '\n\nMensagem: ' + mensagem : ''}`;
 
-    const numero = "5543988724786"; // Substitua pelo seu número do WhatsApp
+    const numero = "5543988735337"; // Substitua pelo seu número do WhatsApp
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
 
     window.open(url, "_blank");
