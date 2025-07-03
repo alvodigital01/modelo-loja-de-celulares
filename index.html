@@ -8,6 +8,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="imagens/Tecno Pro (1).png" type="image/x-icon">
+     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
 <header>
@@ -139,11 +140,41 @@
 
  
 
+<br>
+<br>
 
 
-
-
-
+<section class="secao-beneficios">
+  <div class="container-beneficios">
+    <div class="texto-esquerda animar esquerda">
+        <BR></BR>
+      <h2>Por que escolher a TECNO PRO?</h2>
+    </div>
+    <div class="beneficios">
+      <div class="beneficio animar direita">
+        <i class="ph ph-check-circle"></i>
+        <div>
+          <h3>Produtos 100% originais</h3>
+          <p><strong class="azul">Fuja das réplicas!</strong> Invista em produtos originais, com desempenho superior e durabilidade incomparável.</p>
+        </div>
+      </div>
+      <div class="beneficio animar direita">
+        <i class="ph ph-lightning"></i>
+        <div>
+          <h3>A pronta entrega</h3>
+          <p><strong class="azul">Comprou, levou!</strong> Seu novo dispositivo em mãos sem espera e com agilidade.</p>
+        </div>
+      </div>
+      <div class="beneficio animar direita">
+        <i class="ph ph-credit-card"></i>
+        <div>
+          <h3>Em até 12x no cartão</h3>
+          <p>Pagamento facilitado em até 12 vezes, para você ter o que deseja <strong class="azul">sem pesar no seu bolso.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -204,6 +235,24 @@
 
   window.addEventListener('scroll', animarSecoes);
   window.addEventListener('load', animarSecoes);
+</script>
+
+
+ <!-- sessao parcelamento -->
+
+<script>
+  const elementosAnimar = document.querySelectorAll('.animar');
+
+  const observer = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visivel');
+        observer.unobserve(entrada.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elementosAnimar.forEach(el => observer.observe(el));
 </script>
 
 </body>

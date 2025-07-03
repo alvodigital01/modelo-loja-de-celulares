@@ -298,3 +298,100 @@ nav a:hover {
 }
 
 
+
+/* sessao beneficios */
+
+ .secao-beneficios {
+      background: linear-gradient(to right, #0077ED, #000000);
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .container-beneficios {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .texto-esquerda {
+      flex: 1 1 40%;
+      font-size: 2em;
+      font-weight: bold;
+      padding-right: 20px;
+    }
+
+    .beneficios {
+      flex: 1 1 55%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .beneficio {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .beneficio i {
+      font-size: 2rem;
+      color: #00B0FF;
+      flex-shrink: 0;
+    }
+
+    .beneficio h3 {
+      margin: 0;
+      font-size: 1.3em;
+      color: white;
+    }
+
+    .beneficio p {
+      margin: 5px 0 0;
+      color: #ddd;
+    }
+
+    .azul {
+      color: #00B0FF;
+    }
+
+    /* Animações */
+    .animar {
+      opacity: 0;
+      transform: translateX(100px);
+      transition: all 1s ease;
+    }
+
+    .animar.esquerda {
+      transform: translateX(-100px);
+    }
+
+    .animar.visivel {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @media (max-width: 768px) {
+      .container-beneficios {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .texto-esquerda {
+        padding: 0;
+        margin-bottom: 30px;
+        font-size: 1.5em;
+      }
+
+      .beneficio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .beneficio i {
+        font-size: 1.8rem;
+      }
+    }
