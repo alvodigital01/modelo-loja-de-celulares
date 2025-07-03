@@ -155,18 +155,53 @@ nav a:hover {
   margin-bottom: 30px;
 }
 
-.hero-btn {
-  background-color: #0077ED;
-  color: white;
-  padding: 13px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+ .botao-containerr-brilhante {
+  position: relative;
+  display: inline-block;
 }
 
-.hero-btn:hover {
-  background-color: #0076edca;
+.formm {
+  background: linear-gradient(90deg, #0077ED, #0077ED);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  z-index: 2; /* Fica acima do brilho */
+}
+
+.formm:hover {
+  background: linear-gradient(90deg, #0066d3, #0088ff);
+}
+
+.lightt-line-form {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, transparent, #00aeff8b, transparent);
+  background-size: 300% 100%;
+  animation: moveLightForm 2s linear infinite;
+  filter: blur(2px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes moveLightForm {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .hero-image img {
