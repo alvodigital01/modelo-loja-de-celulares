@@ -179,6 +179,56 @@
 
 
 
+<section class="secao-depoimentos">
+  <h2>O que nossos clientes dizem</h2>
+  <div class="depoimentos-container">
+    
+    <div class="depoimento animar">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente 1">
+      <strong>Ana Paula</strong>
+      <div class="estrelas">
+  <i class="ph-fill ph-star"></i>
+  <i class="ph-fill ph-star"></i>
+  <i class="ph-fill ph-star"></i>
+  <i class="ph-fill ph-star"></i>
+  <i class="ph-fill ph-star"></i>
+</div>
+
+      <p class="comentario">“Atendimento excelente! Recebi meu iPhone em 1 dia. Muito confiável.”</p>
+    </div>
+
+    <div class="depoimento animar">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente 2">
+      <strong>Lucas Mendes</strong>
+     <div class="estrelas">
+  <i class="ph-fill ph-star"></i>
+  <i class="ph-fill ph-star"></i>
+  <i class="ph-fill ph-star"></i>
+  <i class="ph-fill ph-star"></i>
+  <i class="ph-fill ph-star-half"></i>
+</div>
+
+      <p class="comentario">“Produto original mesmo, nota fiscal e tudo certinho. Recomendo demais.”</p>
+    </div>
+
+    <div class="depoimento animar">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente 3">
+      <strong>Marina Costa</strong>
+      <div class="estrelas">
+  <i class="ph-fill ph-star"></i>
+  <i class="ph-fill ph-star"></i>
+  <i class="ph-fill ph-star"></i>
+  <i class="ph-fill ph-star"></i>
+  <i class="ph-fill ph-star"></i>
+</div>
+
+      <p class="comentario">“Parcelamento facilitado e chegou muito rápido. Atendimento top.”</p>
+    </div>
+
+  </div>
+</section>
+
+
 
 
 
@@ -255,5 +305,24 @@
   elementosAnimar.forEach(el => observer.observe(el));
 </script>
 
+
+
+ <!-- sessao DEPOIMENTOS -->
+
+<script>
+  // Animação de rolagem
+  const depoimentos = document.querySelectorAll('.depoimento');
+
+  const observerr = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visivel');
+        observer.unobserve(entrada.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  depoimentos.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
