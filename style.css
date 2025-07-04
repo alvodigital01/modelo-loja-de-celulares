@@ -874,8 +874,8 @@ nav a:hover {
         /* FOOTER */
 
 
-    .footer {
-  background-color: #cccccc;
+.footer {
+  background: linear-gradient(to right, #0077ED, #000000);
   color: #ffffff;
   padding: 40px 20px;
   text-align: center;
@@ -914,19 +914,19 @@ margin-bottom: 10px;
 }
 
 .footer-icons a:hover {
-  background-color: #00aeffc9;
+  background-color: #cccccc;
   transform: scale(1.05);
 }
 
 
 .footer-info p {
   margin: 5px 0;
-  color: #000000;
+  color: #cccccc;
   font-size: 14px;
 }
 
 .footer-info a {
-  color: #000000;
+  color: #cccccc;
   text-decoration: none;
 }
 
