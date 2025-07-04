@@ -66,11 +66,18 @@
         <span class="lightt-line-form"></span>
       </div>
     </div>
-
-    <div class="hero-image">
-      <img src="imagens/iphone_15_colurs_1694541091519.avif" alt="Mockup de iPhones" id="heroImg" />
+<div class="hero-image">
+  <div class="carousel-box">
+    <div class="carousel-slide">
+      <img src="imagens/iphone15.webp" alt="Produto 1">
+      <img src="imagens/games1.png" alt="Produto 2">
+      <img src="imagens/sansungs24ultra.webp" alt="Produto 3">
+      <img src="imagens/Ipad1.png" alt="Produto 4">
     </div>
   </div>
+</div>
+
+
 </section>
 
 
@@ -400,6 +407,30 @@
     image.style.transform = 'translateX(0)';
   });
 </script>
+
+<script>
+  // Animação inicial
+  window.addEventListener('load', () => {
+    const text = document.querySelector('.hero-text');
+    const image = document.querySelector('.hero-image');
+
+    text.style.opacity = '1';
+    text.style.transform = 'translateX(0)';
+    image.style.opacity = '1';
+    image.style.transform = 'translateX(0)';
+  });
+
+  // Carrossel automático
+  const slide = document.querySelector('.carousel-slide');
+  const totalSlides = slide.children.length;
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % totalSlides;
+    slide.style.transform = `translateX(-${index * 100}%)`;
+  }, 3000); // Muda a imagem a cada 3 segundos
+</script>
+
 
 
 
