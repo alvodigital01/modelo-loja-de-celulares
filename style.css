@@ -115,15 +115,18 @@ nav a:hover {
 
 
 
+/* Seção principal */
 .hero-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   padding: 80px 20px;
   background: linear-gradient(90deg, #ffffff, #f9fbff);
   overflow: hidden;
 }
 
+/* Container */
 .hero-content {
   display: flex;
   max-width: 1200px;
@@ -134,20 +137,22 @@ nav a:hover {
   gap: 40px;
 }
 
-.hero-text, .hero-image {
-  flex: 1 1 100%;
-  text-align: center;
+/* Texto */
+.hero-text {
+  flex: 1;
+  text-align: left;
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s ease;
 }
 
+
 .hero-text h1 {
-  font-size: 2.7rem;
+  font-size: 3rem;
   color: #111;
-  margin-bottom: 20px;
   font-weight: 800;
   line-height: 1.2;
+  margin: 0;
 }
 
 .hero-text h1 span.gradient-text {
@@ -157,11 +162,12 @@ nav a:hover {
 }
 
 .hero-text p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #444;
-  margin-bottom: 30px;
+  margin: 0;
 }
 
+/* Botão */
 .botao-containerr-brilhante {
   position: relative;
   display: inline-block;
@@ -171,8 +177,8 @@ nav a:hover {
   background: linear-gradient(90deg, #0077ED, #0077ED);
   border: none;
   color: white;
-  padding: 14px 30px;
-  font-size: 1rem;
+  padding: 16px 36px;
+  font-size: 1.1rem;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
@@ -212,63 +218,29 @@ nav a:hover {
   }
 }
 
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  animation: float 3s ease-in-out infinite;
+/* Imagem */
+.hero-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-/* Responsivo (Mobile) */
-@media (min-width: 768px) {
-  .hero-content {
-    flex-wrap: nowrap;
-  }
-
-  .hero-text {
-    flex: 1;
-    text-align: left;
-    transform: translateX(-50px);
-  }
-
-  .hero-image {
-    flex: 1;
-    transform: translateX(50px);
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .formm {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-
-/* Caixa do carrossel */
+/* Carrossel */
 .carousel-box {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 16px;
   background-color: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   position: relative;
   margin: auto;
 }
 
-/* Slide de imagens */
 .carousel-slide {
   display: flex;
   width: 100%;
@@ -285,6 +257,46 @@ nav a:hover {
   flex-shrink: 0;
   display: block;
   margin: auto;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+.hero-text h1 {
+  font-size: 3rem;
+  color: #111;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+}
+  .hero-text {
+    text-align: center;
+    order: 1;
+    transform: translateY(0);
+  }
+
+  .hero-image {
+    order: 2;
+    transform: translateY(0);
+    margin-top: 30px;
+  }
+
+  .formm {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .carousel-box {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .carousel-slide img {
+    height: auto;
+  }
 }
 
 /* produtos */
@@ -862,7 +874,7 @@ nav a:hover {
 
 
     .footer {
-  background-color: #5555551c;
+  background-color: #cccccc;
   color: #ffffff;
   padding: 40px 20px;
   text-align: center;
