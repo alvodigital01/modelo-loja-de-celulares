@@ -405,7 +405,7 @@ nav a:hover {
 /* sessao beneficios */
 
  .secao-beneficios {
-      background: linear-gradient(to right, #0077ED, #000000);
+      background: linear-gradient(to right, #0077ED, #000000ea);
       color: white;
       padding: 60px 20px;
     }
@@ -875,7 +875,7 @@ nav a:hover {
 
 
 .footer {
-  background: linear-gradient(to right, #0077ED, #000000);
+  background: linear-gradient(to right, #0077ED, #000000ea);
   color: #ffffff;
   padding: 40px 20px;
   text-align: center;
