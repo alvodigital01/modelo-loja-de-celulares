@@ -164,7 +164,7 @@ nav a:hover {
 
 .hero-text p {
   font-size: 1rem;
-  color: #444;
+  color: #000000;
   margin: 0;
 }
 
@@ -202,7 +202,7 @@ nav a:hover {
   right: -3px;
   bottom: -3px;
   border-radius: 10px;
-  background: linear-gradient(90deg, transparent, #00aeff8b, transparent);
+  background: linear-gradient(90deg, transparent, #00aeff, transparent);
   background-size: 300% 100%;
   animation: moveLightForm 2s linear infinite;
   filter: blur(2px);
@@ -405,8 +405,8 @@ nav a:hover {
 /* sessao beneficios */
 
  .secao-beneficios {
-       background: linear-gradient(to right, white 0%, #0076ed44 100%);
-      color: rgb(0, 0, 0);
+         background: linear-gradient(to right,#0076edde,#0076ed, #0076eddb 100%);
+      color: rgb(255, 255, 255);
       padding: 60px 20px;
     }
 
@@ -441,7 +441,7 @@ nav a:hover {
 
     .beneficio i {
       font-size: 2rem;
-      color: #00B0FF;
+      color: #000000;
       flex-shrink: 0;
     }
 
@@ -453,11 +453,11 @@ nav a:hover {
 
     .beneficio p {
       margin: 5px 0 0;
-      color: #000000;
+      color: #ffffff;
     }
 
     .azul {
-      color: #00B0FF;
+      color: #000000;
     }
 
     /* Animações */
@@ -789,7 +789,7 @@ nav a:hover {
     }
 
     .formulario-whatsapp button {
-      background: linear-gradient(90deg, #00B0FF, #00aeffb4);
+      background: linear-gradient(90deg, #0076ed, #0076ed);
       border: none;
       color: white;
       padding: 12px 30px;
@@ -818,7 +818,7 @@ nav a:hover {
       right: -3px;
       bottom: -3px;
       border-radius: 10px;
-      background: linear-gradient(90deg, transparent, #00aeff22, transparent);
+      background: linear-gradient(90deg, transparent, #00aeff53, transparent);
       background-size: 300% 100%;
       animation: moveLightForm 2s linear infinite;
       filter: blur(2px);
@@ -875,7 +875,7 @@ nav a:hover {
 
 
 .footer {
-   background: linear-gradient(to right, white 0%, #0076ed44 100%);
+   background: linear-gradient(to right,#0076edde,#0076ed, #0076eddb 100%);
   color: #ffffff;
   padding: 40px 20px;
   text-align: center;
