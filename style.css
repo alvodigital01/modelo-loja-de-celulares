@@ -15,7 +15,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-   background: linear-gradient(135deg, white 0%, #0077ED 100%);
+   background: linear-gradient(135deg, white 0%, #0076ed44 100%);
   
   position: relative;
   z-index: 1001;
@@ -122,7 +122,7 @@ nav a:hover {
   align-items: center;
   min-height: 100vh;
   padding: 80px 20px;
- background: linear-gradient(135deg, white 0%, #0077ED 100%);
+ background: linear-gradient(to right, white 0%, #0076ed44 100%);
   overflow: hidden;
 }
 
